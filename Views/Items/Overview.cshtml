@@ -1,0 +1,28 @@
+@model MyMvcApp.Models.Item
+
+@* @if (Model != null)
+{
+    <h1>Item Details</h1>
+    <p>Name: @Model.Name</p>
+}
+else
+{
+    <p>No item details available.</p>
+} *@
+
+@* @{
+    var message = "Hello, World!";
+} *@
+
+@* <p>@message</p> *@
+
+@{
+    var items = new List<string> { "Item 1", "Item 2", "Item 3" };
+}
+
+<ul>
+    @foreach(var item in items)
+    {
+        <li>@item</li>
+    }
+</ul>
