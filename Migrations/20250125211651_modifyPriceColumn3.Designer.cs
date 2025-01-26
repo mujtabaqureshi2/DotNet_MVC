@@ -11,8 +11,8 @@ using MyMvcApp.Data;
 namespace MyMvcApp.Migrations
 {
     [DbContext(typeof(MyMvcAppContext))]
-    [Migration("20250120175929_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20250125211651_modifyPriceColumn3")]
+    partial class modifyPriceColumn3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,6 +35,9 @@ namespace MyMvcApp.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
